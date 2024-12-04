@@ -6,7 +6,7 @@ frontend: html, css
 backend: node.js
 
 database: mysql
-
+<hr>
 логотип
 
 ![image](https://github.com/user-attachments/assets/83c8d74f-5c8a-45f6-af88-140812001247)
