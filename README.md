@@ -19,3 +19,7 @@ database: mysql
 логотип
 
 ![image](https://github.com/user-attachments/assets/83c8d74f-5c8a-45f6-af88-140812001247)
+
+админ панель
+
+![image](https://github.com/user-attachments/assets/5962e9d0-725e-4caf-a634-d8f4cab400d3)
