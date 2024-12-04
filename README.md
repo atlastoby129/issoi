@@ -7,6 +7,10 @@ backend: node.js
 
 database: mysql
 
+логотип
+
+![image](https://github.com/user-attachments/assets/83c8d74f-5c8a-45f6-af88-140812001247)
+
 главная страница mid
 
 ![image](https://github.com/user-attachments/assets/2bb723ff-9ccc-4bf4-8298-cf17143b5fa3)
@@ -18,10 +22,6 @@ database: mysql
 главная страница right
 
 ![image](https://github.com/user-attachments/assets/5e5bf533-a1eb-411a-b437-1f50ca32dd4b)
-
-логотип
-
-![image](https://github.com/user-attachments/assets/83c8d74f-5c8a-45f6-af88-140812001247)
 
 админ панель
 
