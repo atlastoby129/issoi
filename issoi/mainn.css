@@ -1,0 +1,114 @@
+.head {
+    width: 100%;
+    height: 20%;
+}
+.top_menu {
+    background-color: rgb(66, 158, 208);
+    width: 100%;
+}
+.body {
+    width: 100%;
+    height: 60%;
+}
+.footer {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(51, 135, 173);
+}
+.location {
+    color: white;
+    text-align: left;
+}
+.hotline_number {
+    color: white;
+    text-align: center;
+}
+.logins {
+    color: white;
+    text-align: right;
+}
+.top_menu {
+    width: 100%;
+}
+.about_company{
+    color: white;
+    text-align: left;
+    bottom: auto;
+}
+.bug_report {
+    padding-right: 15%;
+    color: white;
+    bottom: auto;
+    text-align: center;
+}
+.policy_of_confidence{
+    color: white;
+    bottom: auto;
+    padding-left: 15%;
+    text-align: center; 
+}
+.adress{
+    color: white;
+    bottom: auto;
+    text-align: right;
+}
+.compass{
+    width: auto;
+    height: auto;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news1 {
+    width: 750px;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news2 {
+    width: 750px;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news3 {
+    width: 750px;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_links{
+    display: inline;
+    float: right;
+    color: black;
+    padding: 50px;
+}
+.top_links:hover {
+    color: gray;
+}
+.logins:hover {
+    color: black;
+}
+.hotline_number:hover {
+    color: black;
+}
+.location:hover {
+    color: black;
+}
+.about_company:hover {
+    color: black;
+}
+.bug_report:hover {
+    color: black;
+}
+.policy_of_confidence:hover {
+    color: black;
+}
+.adress:hover {
+    color: black;
+}
