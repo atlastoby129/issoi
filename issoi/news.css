@@ -5,80 +5,61 @@
 .top_menu {
     background-color: rgb(66, 158, 208);
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-}   
+}
 .body {
     width: 100%;
     height: 60%;
 }
 .footer {
     width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
+    height: 20%;
     background-color: rgb(51, 135, 173);
-    bottom: 0px;
-    position: fixed;
 }
 .location {
     color: white;
-    cursor: pointer;
+    text-align: left;
+    width: 5%;
 }
 .hotline_number {
     color: white;
-    cursor: pointer;
+    text-align: center;
+    width: 5%;
 }
 .logins {
     color: white;
-    cursor: pointer;
+    text-align: right;
+    width: 5%;
 }
 .top_menu {
     width: 100%;
 }
 .about_company{
     color: white;
-    cursor: pointer;
+    text-align: left;
+    bottom: auto;
 }
 .bug_report {
+    padding-right: 15%;
     color: white;
-    cursor: pointer;
+    bottom: auto;
+    text-align: center;
 }
 .policy_of_confidence{
     color: white;
-    cursor: pointer;
+    bottom: auto;
+    padding-left: 15%;
+    text-align: center; 
 }
 .adress{
     color: white;
-    cursor: pointer;
+    bottom: auto;
+    text-align: right;
 }
 .compass{
     width: auto;
     height: auto;
-    cursor: pointer;
 }
 .slider{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.news1 {
-    width: 750px;
-    height:750px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.news2 {
-    width: 750px;
-    height:750px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.news3 {
-    width: 750px;
-    height:750px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,9 +94,22 @@
 .adress:hover {
     color: black;
 }
-.prev-button{
-    cursor: pointer;
-}
-.next-button {
-    cursor: pointer;
-}
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .news {
+    justify-content: space-around;
+  }
+  
+  @media (max-width: 1000px) {
+    .news {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .news {
+      max-width: 35%;
+    }
+  }
