@@ -39,6 +39,7 @@
 .about_company{
     color: white;
     cursor: pointer;
+    margin-left: 10px;
 }
 .bug_report {
     color: white;
@@ -50,17 +51,13 @@
 }
 .adress{
     color: white;
-    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 .compass{
     width: auto;
     height: auto;
     cursor: pointer;
-}
-.slider{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .news1 {
     width: 750px;
@@ -113,9 +110,39 @@
 .adress:hover {
     color: black;
 }
-.prev-button{
-    cursor: pointer;
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.prev-button,
+.next-button {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: black;
+}
+
+.prev-button {
+  cursor: pointer;
+}
+
 .next-button {
     cursor: pointer;
+}
+.poloska {
+background-color: rgb(51, 135, 173);
+width: 630px;
+height: 5px;
+position: fixed;
+right: 25px;
+top: 130px
+}
+.footer_link {
+    text-decoration: none;
+    margin-top: 15px;
 }
