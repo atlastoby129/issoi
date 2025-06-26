@@ -50,6 +50,7 @@
 }
 .adress{
     color: white;
+    cursor: pointer;
 }
 .compass{
     width: auto;

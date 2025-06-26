@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Авторизация и регистрация</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: rgb(66, 158, 208);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 350px;
+    padding: 30px 40px;
+  }
+
+  h2 {
+    margin: 0 0 20px;
+    color: rgb(51, 135, 173);
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    color: rgb(51, 135, 173);
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(66, 158, 208);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: rgb(51, 135, 173);
+    outline: none;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(51, 135, 173);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background: rgb(66, 158, 208);
+  }
+
+  .toggle-link {
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(51, 135, 173);
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+  }
+
+  .toggle-link:hover {
+    text-decoration: underline;
+  }
+
+  .error-message {
+    color: #d93025;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form id="login-form">
+    <h2>Авторизация</h2>
+    <div class="form-group">
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" required />
+      <div class="error-message" id="login-email-error"></div>
+    </div>
+    <div class="form-group">
+      <label for="login-password">Пароль</label>
+      <input type="password" id="login-password" required minlength="6" />
+      <div class="error-message" id="login-password-error"></div>
+    </div>
+    <button type="submit">Войти</button>
+    <div class="toggle-link" id="show-register">Нет аккаунта? Зарегистрироваться</div>
+  </form>
+
+  <form id="register-form" style="display:none;">
+    <h2>Регистрация</h2>
+    <div class="form-group">
+      <label for="register-name">Имя</label>
+      <input type="text" id="register-name" required minlength="2" />
+      <div class="error-message" id="register-name-error"></div>
+    </div>
+    <div class="form-group">
+      <label for="register-email">Email</label>
+      <input type="email" id="register-email" required />
+      <div class="error-message" id="register-email-error"></div>
+    </div>
+    <div class="form-group">
+      <label for="register-password">Пароль</label>
+      <input type="password" id="register-password" required minlength="6" />
+      <div class="error-message" id="register-password-error"></div>
+    </div>
+    <button type="submit">Зарегистрироваться</button>
+    <div class="toggle-link" id="show-login">Уже есть аккаунт? Войти</div>
+  </form>
+</div>
+
+<script>
+  const loginForm = document.getElementById('login-form');
+  const registerForm = document.getElementById('register-form');
+  const showRegisterLink = document.getElementById('show-register');
+  const showLoginLink = document.getElementById('show-login');
+
+  showRegisterLink.addEventListener('click', () => {
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
+    clearErrors();
+  });
+
+  showLoginLink.addEventListener('click', () => {
+    registerForm.style.display = 'none';
+    loginForm.style.display = 'block';
+    clearErrors();
+  });
+
+  function clearErrors() {
+    const errors = document.querySelectorAll('.error-message');
+    errors.forEach(e => e.textContent = '');
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  loginForm.addEventListener('submit', e => {
+    e.preventDefault();
+    clearErrors();
+
+    const emailInput = document.getElementById('login-email');
+    const passwordInput = document.getElementById('login-password');
+    let valid = true;
+
+    if (!validateEmail(emailInput.value)) {
+      document.getElementById('login-email-error').textContent = 'Введите корректный email';
+      valid = false;
+    }
+
+    if (passwordInput.value.length < 6) {
+      document.getElementById('login-password-error').textContent = 'Пароль должен быть не менее 6 символов';
+      valid = false;
+    }
+
+    if (valid) {
+      alert(`Вход выполнен!\nEmail: ${emailInput.value}`);
+      loginForm.reset();
+    }
+  });
+
+  registerForm.addEventListener('submit', e => {
+    e.preventDefault();
+    clearErrors();
+
+    const nameInput = document.getElementById('register-name');
+    const emailInput = document.getElementById('register-email');
+    const passwordInput = document.getElementById('register-password');
+    let valid = true;
+
+    if (nameInput.value.trim().length < 2) {
+      document.getElementById('register-name-error').textContent = 'Введите имя минимум из 2 символов';
+      valid = false;
+    }
+
+    if (!validateEmail(emailInput.value)) {
+      document.getElementById('register-email-error').textContent = 'Введите корректный email';
+      valid = false;
+    }
+
+    if (passwordInput.value.length < 6) {
+      document.getElementById('register-password-error').textContent = 'Пароль должен быть не менее 6 символов';
+      valid = false;
+    }
+
+    if (valid) {
+      alert(`Регистрация успешна!\nИмя: ${nameInput.value}\nEmail: ${emailInput.value}`);
+      registerForm.reset();
+      registerForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,49 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head class="head">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>issoi</title>
-    <link rel="stylesheet" type ="text/css" href="mainn.css">
+    <title>Контакты - issoi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<div class="top_menu">
-    <div class="location">
-        <img src="img/location.png" width="35px" height="35">укажите местоположение
-    </div>
-    <div class="hotline_number">
-        номер горячей линии
-    </div>
-    <div class="logins">
-        вход
-        <img src="img/login.png" width="35px" height="35">
-    </div>
-</div>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        .head {
+            width: 100%;
+            height: 20%;
+        }
+        .top_menu {
+            background-color: rgb(66, 158, 208);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }   
+        .body {
+            width: 100%;
+            height: 60%;
+        }
+        .footer {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(51, 135, 173);
+            bottom: 0px;
+            position: fixed;
+        }
+        .location {
+            color: white;
+            cursor: pointer;
+        }
+        .hotline_number {
+            color: white;
+            cursor: pointer;
+        }
+        .logins {
+            color: white;
+            cursor: pointer;
+        }
+        .about_company {
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .bug_report {
+            color: white;
+            cursor: pointer;
+        }
+        .policy_of_confidence {
+            color: white;
+            cursor: pointer;
+        }
+        .adress {
+            color: white;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+        .compass {
+            width: auto;
+            height: auto;
+            cursor: pointer;
+        }
+        .top_menu {
+            width: 100%;
+        }
+        .about_company:hover,
+        .bug_report:hover,
+        .policy_of_confidence:hover,
+        .adress:hover,
+        .location:hover,
+        .hotline_number:hover,
+        .logins:hover {
+            color: black;
+        }
+main {
+    padding: 20px;
+    color: black; 
+    font-family: 'Open Sans', sans-serif;
+}
+main a {
+    color: black; 
+    text-decoration: underline;
+}
+main a:hover {
+    color: #555; 
+}
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body class="body">
+
+    <div class="top_menu">
+        <div class="location">
+            <img src="img/location.png" width="35px" height="35" alt="Локация"> Нарьян-Мар, Россия
+        </div>
+        <div class="hotline_number">
+            Горячая линия: +7 (495) 123-45-67
+        </div>
+        <div class="logins">
+            Вход
+            <img src="img/login.png" width="35px" height="35" alt="Вход">
+        </div>
+    </div>
+
     <a href="indexxx.html">
-        <img src="img/compass.png" class="compass">
+        <img src="img/compass.png" class="compass" alt="Главная">
     </a>
+
+    <main>
+        <h1>Контакты</h1>
+        <p>Свяжитесь с нами любым удобным способом:</p>
+
+        <h2>Адрес офиса</h2>
+        <p>г. Нарьян-Мар, ул. Выучейского, д. 12, офис 52</p>
+
+        <h2>Телефон</h2>
+        <p>+7 (495) 123-45-67</p>
+
+        <h2>Email</h2>
+        <p><a href="mailto:info@issoi.ru">info@issoi.ru</a></p>
+
+        <h2>График работы</h2>
+        <p>Пн-Пт: 9:00 - 18:00<br>Сб-Вс: выходные</p>
+
+        <h2>Социальные сети</h2>
+        <ul>
+            <li><a href="https://vk.com/issoi" target="_blank" rel="noopener noreferrer">ВКонтакте</a></li>
+            <li><a href="https://facebook.com/issoi" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://instagram.com/issoi" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+    </main>
+
     <script src="scriptt.js"></script>
+
+    <footer class="footer">
+        <div class="about_company">
+            О компании
+        </div>
+        <div class="bug_report">
+            Нашли ошибку? Напишите нам
+        </div>
+        <div class="policy_of_confidence">
+            Политика конфиденциальности
+        </div>
+        <div class="adress">
+            г. Нарьян-Мар, ул. Выучейского, д. 12
+        </div>
+    </footer>
 </body>
-<footer class="footer">
-    <a href="about_company.html" class="footer_link"><div class="about_company">
-        о компании
-    </div>
-    </a>
-    <a href="ask_question.html" class="footer_link">
-    <div class="bug_report">
-        нашли ошибку? напишите нам
-    </div>
-    </a>
-    <a href="privacy policy.html" class="footer_link">
-    <div class="policy_of_confidence">
-        политика конфиндециальности
-    </div>
-    </a>
-    <div class="adress">
-        адрес местонахождения офиса
-    </div>
-</footer>
 </html>

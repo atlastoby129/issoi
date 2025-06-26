@@ -1,54 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
-<head class="head">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>issoi</title>
-    <link rel="stylesheet" type ="text/css" href="mainn.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<div class="top_menu">
-    <div class="location">
-        <img src="img/location.png" width="35px" height="35">Укажите местоположение
-    </div>
-    <div class="hotline_number">
-        Номер горячей линии
-    </div>
-    <div class="logins" >
-        Вход
-        <img src="img/login.png" width="35px" height="35">
-    </div>
-</div>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Политика конфиденциальности</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      padding-bottom: 50px; 
+      background-color: #f0f4f8;
+    }
+    .top_menu {
+      background-color: rgb(66, 158, 208);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 20px;
+      box-sizing: border-box;
+      color: white;
+      font-weight: 600;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 50px;
+      z-index: 1000;
+      padding-left: 60px; 
+    }
+    .top_menu > div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+    }
+    .top_menu .logins a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.home-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1100;
+      display: inline-block;
+    }
+    a.home-link img.compass {
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      display: block;
+    }
+    main {
+      max-width: 700px;
+      margin: 80px auto 70px;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      color: #333;
+      line-height: 1.6;
+    }
+    main h1 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: rgb(51, 135, 173);
+      text-align: center;
+    }
+    footer.footer {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(51, 135, 173);
+      bottom: 0px;
+      position: fixed;
+      left: 0;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: white;
+      font-weight: 600;
+      z-index: 1000;
+    }
+    .footer_link {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .footer_link div {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .adress {
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    @media (max-width: 600px) {
+      main {
+        margin: 80px 15px 70px;
+        padding: 20px;
+      }
+      .top_menu {
+        flex-direction: column;
+        height: auto;
+        gap: 5px;
+        padding: 10px 15px;
+        font-size: 14px;
+        padding-left: 60px;
+      }
+      footer.footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 15px;
+        gap: 5px;
+        font-size: 12px;
+      }
+      .footer_link div, .adress {
+        padding: 5px 0;
+      }
+    }
+  </style>
 </head>
-<body class="body">
-    <a href="indexxx.html">
-        <img src="img/compass.png" class="compass">
-    </a>
-    <a href="news.html"><div class="top_links">Новости</div></a>
-    <a href="contacts.html"><div class="top_links">Контакты</div></a>
-    <a href="FAQ.html"><div class="top_links">FAQ</div></a>
-    <a href="map.html"><div class="top_links">Интерактивная карта</div></a>
-    <div class="poloska"></div>
-    <script src="scriptt.js"></script>
-</body>
-<footer class="footer">
-    <a href="about_company.html" class="footer_link"><div class="about_company">
-        о компании
+<body>
+  <a href="indexxx.html" class="home-link" aria-label="На главную">
+    <img src="img/compass.png" class="compass" alt="Иконка компаса — перейти на главную страницу" />
+  </a>
+
+  <div class="top_menu">
+    <div class="location">
+      <img src="img/location.png" width="35" height="35" alt="Иконка местоположения" />Укажите местоположение
     </div>
+    <div class="hotline_number">Номер горячей линии</div>
+    <div class="logins">
+      <a href="authentification.html">Вход</a>
+      <img src="img/login.png" width="35" height="35" alt="Иконка входа" />
+    </div>
+  </div>
+
+  <main>
+    <h1>Политика конфиденциальности</h1>
+    <p>Добро пожаловать на наш сайт! Мы ценим вашу конфиденциальность и обязуемся защищать ваши персональные данные.</p>
+
+    <h2>Сбор информации</h2>
+    <p>Мы можем собирать личную информацию, такую как имя, адрес электронной почты и другие данные, которые вы предоставляете при использовании нашего сайта или при заполнении форм обратной связи.</p>
+
+    <h2>Использование информации</h2>
+    <p>Собранные данные используются для улучшения качества обслуживания, обработки ваших запросов и предоставления информации, которая может быть вам полезна.</p>
+
+    <h2>Безопасность данных</h2>
+    <p>Мы принимаем необходимые меры для защиты ваших данных от несанкционированного доступа, изменения, раскрытия или уничтожения.</p>
+
+    <h2>Передача данных третьим лицам</h2>
+    <p>Мы не передаем ваши персональные данные третьим лицам без вашего согласия, за исключением случаев, предусмотренных законом.</p>
+
+    <h2>Использование файлов cookie</h2>
+    <p>Наш сайт может использовать файлы cookie для улучшения пользовательского опыта. Вы можете настроить свой браузер для управления cookie.</p>
+
+    <h2>Изменения в политике конфиденциальности</h2>
+    <p>Мы оставляем за собой право вносить изменения в эту политику. Рекомендуем периодически просматривать эту страницу для ознакомления с обновлениями.</p>
+
+    <h2>Контакты</h2>
+    <p>Если у вас есть вопросы по поводу нашей политики конфиденциальности, пожалуйста, свяжитесь с нами через форму обратной связи или по контактам, указанным на сайте.</p>
+  </main>
+
+  <footer class="footer">
+    <a href="about_company.html" class="footer_link">
+      <div class="about_company">о компании</div>
     </a>
     <a href="ask_question.html" class="footer_link">
-    <div class="bug_report">
-        нашли ошибку? напишите нам
-    </div>
+      <div class="bug_report">нашли ошибку? напишите нам</div>
     </a>
-    <a href="privacy policy.html" class="footer_link">
-    <div class="policy_of_confidence">
-        политика конфиндециальности
-    </div>
+    <a href="privacy_policy.html" class="footer_link">
+      <div class="policy_of_confidence">политика конфиндециальности</div>
     </a>
-    <div class="adress">
-        адрес местонахождения офиса
-    </div>
-</footer>
+    <div class="adress">адрес местонахождения офиса</div>
+  </footer>
+</body>
 </html>
